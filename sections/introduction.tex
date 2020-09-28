@@ -1,0 +1,181 @@
+%\addcontentsline{toc}{section}{Introduction}
+\section{Introduction} \label{introduction}
+
+The equity risk premium (ERP) puzzle has been arguably one of the most fascinating and persistent topics in modern macroeconomics and finance since its `discovery' by \citet{Mehra1985}, indicating its high relevance to investors, firms, policy makers and the profession of economics alike.
+
+In a binary world (disaster vs. normal), disaster risk \cite{Rietz1988} comprises the decisive `factor' that determines the compensation for being exposed to consumption risk (over being insured against it as governments rarely default on their debt obligations from providing public liquidity) originating from disastrous events only \cite{Nakamura2013}. %Clearly, countries differ in their experienced histories of disaster states and hence capacities to relate to financial markets. 
+I identify heterogeneity across 16 developed economies spanning almost 150 years of annual observations with respect to disaster risk, returns and macroeconomic growth rates and fully calibrate a consumption-based asset pricing model incorporating Epstein-Zin-Weil preferences based on the random walk with drift model by \citet{Barro2006} at the country level. 
+
+The underlying idea is that countries with relatively higher probability of entering a disastrous state as well as higher contraction size should compensate investors more than less disaster-risky countries. I identify disaster periods according to an NBER-style peak-to-trough procedure which allows disasters to unfold over multiple years rather than occurring instantaneously which has been addressed by \citet{Julliard2012}.
+
+Uncovering heterogeneity in preferences implied by within-country risk-sharing capacity may shed light on structural differences with respect to risk-carrying and tests the model's ability to rationalize the `puzzle' at smaller units. I show that accounting for time-invariant disaster risk does indeed attenuate the `puzzle' in the sense of a) reducing the implied coefficients of relative risk aversion significantly compared to the benchmark specification proposed in \citet{Mehra1985} and further developed in \citet{Mehra2003} and b) yielding robust and plausible model predictions. 
+
+Moreover, the relative order of implied coefficients of relative risk aversion is being preserved compared to the benchmark specification. 
+As \citet{Barro2006} and \citet{Cochrane2017} correctly point out, incorporating stochastic variations in the disaster probability $p_{t}$ would help to explain business-cycle related return predictability and stock price volatility. In my quantitative analysis I treat disaster risk moments as constants (implying that normal and jump shocks are i.i.d. across time and countries and permanent) to provide a baseline estimation at the country level. 
+
+However, \citet{Nakamura2013} incorporate a) consumption data, b) multi-period disasters, c) disaster probability estimation using Bayesian Markov-Chain Monte-Carlo methods and d), most importantly, allow for partial recoveries after crises and therefore address a shortcoming of the \cite{Barro2006} random-walk model which tends to overstate the riskiness of consumption that translates into substantially larger welfare costs of economic fluctuations \cite{Barro2009} as well as higher ERP, at the global level. Accounting for c) and d) is beyond the scope of this paper but \citet{Nakamura2013} argue that it allows for predictability of consumption growth during disasters (which stresses the role of the IES) and reduces the implied coefficient of relative risk aversion to 6.4 and an intertemporal elasticity of substitution of 2.
+
+In consumption-based asset pricing theory where (risk-averse) agents hold assets for the sole purpose of providing future consumption \cite{Abel1991}, optimally when the marginal utility of accessing it is the highest and thus allows for consumption smoothing, combined with general insights from portfolio theory \cite{Markowitz1952} there must be a relationship between characteristics of asset returns and consumption, precisely captured by the so-called stochastic discount factor (volatility) and approximately captured by aggregate consumption (volatility). This is precisely where the puzzle arises: basic consumption-based asset pricing theory cannot be reconciled with the empirical observations, assuming `plausible' values for preferences with respect to risk aversion. The historically observed ERP, originally and most frequently assessed for the US economy \cite{Mehra1985, Cecchetti1993} is too high compared to the model's predicted level for `plausible' values for the coefficient of relative risk aversion (CRRA) and the historically low variability in aggregate consumption expenditures (for a modified version of the original model see \citet{Mehra2003}). 
+%Also, the puzzle lies therein that even knowing that investors are more than sufficiently (given the overall degree of risk in the asset markets to consumption) compensated for holding risky assets, overall demand does not show that action is taken accordingly. Quite on the contrary, increased demand for risk-free assets during the past three decades has been partially driving returns globally close to zero \cite{Jorda2017}.
+
+Apart from theoretical and rather technical aspects ``the real risk-adjusted returns on different asset classes reflect equilibrium resource allocations given society’s investment and consumption choices over time'' \cite{Jorda2017} and involves debates about inequality \cite{Piketty2015}, secular stagnation \cite{Summers2014} and the real rate of interest \cite{Holston2017}. Subtly, the ERP is cause and consequence in its own right. Specifically, it represents the excess return of holding a risky asset over the risk-free rate, or, in other words, the opportunity cost of not participating in a risky lottery, investors demand or expect to receive \textit{in turn} affecting asset prices \textit{in turn} affecting returns and the ERP. In the long run, therefore, the level of the ERP should approach its equilibrium value solely determined by preferences and consumption-related volatility.
+
+The paper will proceed as follows: the remainder of this section will lay the theoretical foundation for an accurate treatment of the objects of interest where section \ref{Risk premium theory} abstracts from asset markets and describes the behaviour and existence of a risk premium from a microeconomic perspective. Section \ref{Asset pricing theory} presents the benchmark asset pricing equations under expected power utility that initially gave rise to the aforementioned puzzle. Subsection \ref{disaster risk theory} introduces the asset pricing model accounting for economic disasters. Section \ref{Data} presents the key global and cross-sectional moments and dynamics of international financial markets data as well as macroeconomic aggregates along with disaster model specific moments in the cross-section. Section \ref{Results} presents the results from a baseline calibration with special attention paid to the coefficient of relative risk aversion and rates of return. Sensitvity analyses are performed without altering the main results. Section \ref{Conclusion} concludes with a brief discussion of the paper's implications for international risk-sharing, fiscal capacity as well as liquidity constraints.
+
+
+\subsection{Risk premium theory} \label{Risk premium theory}
+Many modern applications and past advances in economics rest on the expected utility paradigm, that is assuming an additive, time-separable utility representation. In the light of a static lottery with an uncertain outcome over final wealth/consumption and a risk-averse individual there exists a (positive) risk premium as defined as the difference between the expected value and the preference-specific certainty equivalent. Assuming risk-aversion translates into diminishing marginal utility, a reasonable and general description of human behaviour and satisfies strict concavity of the utility function. The very fact of facing an unknown outcome reduces the received utility already as decreasing departures from the mathematical expected value are marginally weighted higher in terms of (dis-)utility than increasing departures from the expected value. %Lower outcomes are therefore more `painful' than higher outcomes contribute to overall felicity. 
+Of course, the individual always has the opportunity to opt out of the lottery \textbf{and} maintain the same level of utility \textit{as-if} she would participate. Faced with this choice problem (participating in the risky lottery vs. not participating) one can determine the amount of an e.g. monetary transfer in order to eliminate all uncertainty that would need to occur such that the individual is exactly indifferent between either action as characterized by the level where expected utility of the lottery and utility of initial wealth less the risk premium are equalized.
+
+Clearly, the higher the degree of risk aversion (or the degree of curvature of the utility function) the higher the price an individual is willing to pay to eliminate uncertainty, i.e. the risk premium would be higher. A common utility specification is of the class of isoelastic functions, that is 
+\begin{align*}
+    u(c)=
+    \begin{cases}
+        \frac{c^{1-\gamma}}{1-\gamma},& \text{if } \gamma > 0\\
+        ln(c), & \text{if } \gamma = 1\\
+        0, & \text{otherwise}
+    \end{cases}
+\end{align*}
+which is the standard CRRA utility with desirable properties from a mathematical point of view. Due to strict concavity ($\gamma > 0$) Jensen's inequality establishes the existence of a positive risk premium and allows for closed form solutions to the representative agent's first order conditions (see section \ref{Asset pricing theory}), directly relating risk aversion to asset and consumption characteristics. Also note that the Arrow-Pratt index of relative risk aversion 
+\begin{align*}
+    -\frac{u''(c) c}{u'(c)} &= \gamma
+\end{align*}
+which shows that the function is unique up to an affine transformation and basically says that the representative agent's FOC remains unchanged since marginal utilities move in perfect tandem and is therefore independent of the level of initial wealth.
+
+From a social science perspective, however, some assumptions or restrictions implicitly introduced with this functional form are problematic. For example, it introduces a restriction on the intertemporal elasticity of substitution (IES, denoted by $\psi > 0$) which needs to equal the inverse of the coefficient of relative risk aversion, $\gamma$, as shown below:
+\begin{align*}
+    \psi &= \pdv{ln(c_{t+1}/c_{t})}{r} = -\pdv{ln(c_{t+1}/c_{t})}{ln(u'(c_{t+1} / u'(c_{t})))} = \frac{1}{\gamma}
+\end{align*}
+where I have used that
+\begin{align*}
+    R &= \frac{u'(c_{t})}{\beta u'(c_{t+1})} \quad \text{and} \quad ln(R) = r = -ln\left(\frac{u'(c_{t+1})}{u'(c_{t})}\right) - ln(\beta)
+\end{align*}
+In other words this ``behaviorally groundless restriction'' \cite{Weil1989} means that a highly risk-averse individual has an implicit preference to strongly smooth consumption over time/states of the world by becoming more irresponsive to intertemporal incentives such as the interest rate as risk aversion increases and constant consumption growth becomes the main motive, i.e.
+\begin{align*}
+    \pdv{\frac{c_{t+1}}{c_{t}}}{R}{\gamma} < 0
+\end{align*}
+This shortcoming has been recognized early on by \citet{Kreps1978}, \citet{Epstein1989} and \citet{Weil1989} and a generalised form of expected utility has been proposed on which the model calibrated in this paper builds. 
+%In any case the theoretical and empirical ERP might be determined by (and determining) preferences with respect to the curvature of the utility function and can be interpreted as the price of aggregate risk to final wealth/consumption derived from a risky lottery's probability distribution.
+
+That the coefficient of relative risk aversion is assumed to be constant is not natural. For example risk aversion could be specified in absolute terms, i.e. portfolio allocations are made with respect to levels as initial wealth increases rather than weights, or (relative) risk aversion could be assumed to decrease as initial wealth increases. Empirical justification for the working assumption of CRRA has been provided by \citet{Brunnermeier2008} and \citet{Chiappori2011}, though. 
+%Also note that `constant' does not mean that the coefficient of relative risk aversion is invariant at all; it simply means that it is constant for any level of initial wealth. 
+The coefficient of relative risk aversion can (and does) fluctuate over the business cycle as wealth fluctuates \cite{Brunnermeier2008, Gourio2012}.
+
+\subsection{Asset pricing theory} \label{Asset pricing theory}
+As has been already asserted, risk-averse agents dislike extreme levels of consumption contemporaneously and would like to, if they cannot fully eliminate it, minimize this variation at least by reducing risk. They can diversify their future-postponed contingent consumption, also referred to as invested wealth into assets that are independently affected by unfavorable downside events. When faced with the decision between an undiversified portfolio and a diversified one with the same expected return the risk averse agent would prefer the diversified one, since it has a lower variance, conditional that a) the events truly affect the individual components of the portfolio independently (or are mutually-exclusive) and b) the correlation of the individual returns is less than 1. In a well-functioning asset market any investor can achieve diversification individually and full diversification is possible in the sense that only aggregate risk to consumption remains where events aren't independent anymore but affect everyone alike, which matches the meaning of market completeness \cite{Constantinides2003}. Implicitly through diversifying the individual allocated some part of the entire risk associated with one asset to the market (`risk-spreading'), simply by not holding it entirely, where another individual holds part of the asset and is exposed to its risk proportionally to the value held. The preference for diversification is intrinsically equivalent to risk aversion as it aims to strike the optimal balance between risk and return, meaning keeping expected return constant but reducing variance, also referred to as mean-preserving spread, or in economic speech to maximize the net effect of additional expected utility from reallocating one probability unit of loss towards the mean (here: expected, mathematical value) and decreased expected utility from reallocating one probability unit of gains towards the mean \cite{Eeckhoudt2011}. 
+%Hence, any risk averse investor would follow this strategy since only then it would hold that the utility of the expected value of a lottery is greater or equal but never smaller than expected utility of this lottery, which is, by definition, the characteristic of risk aversion.
+
+\subsubsection{Power utility} \label{Power utility}
+It is sensible to start with the fundamental asset pricing equation (FAPE) which describes an investor's first-order condition under standard, expected power utility:
+\begin{align*}
+    p_t &= \mathop{\mathbb{E}_{t}} (m_{t+1} x_{t+1}) \quad \text{where} \quad m_{t+1} = \beta \frac{u'(c_{t+1})}{u'(c_{t})} \quad \text{and} \quad x_{t+1} = p_{t+1} + d_{t+1}
+\end{align*}
+The stochastic discount factor $m_{t+1}$ is generally unobservable but its moments can be approximated by making use of the presumption that consumption is log-normally distributed (i.e. consumption growth is i.i.d.) and the CRRA form, yielding the \citet{Hansen1991} bounds and a closed form solution for the risk-free rate (in continuous time):
+\begin{align*}
+    r_{t}^{f} &= \rho + \gamma \mathop{\mathbb{E}_{t}}(\Delta ln(c_{t+1})) - \frac{1}{2} \gamma (\gamma + 1) \sigma_{t}^{2} (\Delta ln(c_{t+1}))
+\end{align*}
+which shows that the risk-free rate is determined by preferences ($\beta = \frac{1}{1+\rho}$ and $\gamma$) as well as precautionary savings due to uncertain consumption growth. To match the historically low level of real interest rates and low variability of consumption growth risk aversion would have to be sufficiently small, $\gamma \in [1,5]$ \cite{Cochrane2005}. Moreover, ignoring the third (precautionary savings) term, the second, linear term which is the product of the coefficient of relative risk aversion and the expected growth rate of consumption is positive, requiring $\rho$ to be small or even negative which is the \textit{risk-free rate puzzle} \cite{Weil1989}.\\
+\\
+In their original paper \citet{Mehra1985} deploy a variation of \citet{Lucas1978} endowment economy and assume that \textit{the growth rate} of endowment follows a Markov process, not the \textit{level}. The Euler equations for equity and a risk-less one-period bond read
+\begin{align*}
+    1 &= \mathop{\mathbb{E}_{t}} (m_{t+1} R_{t+1}^{e}) \quad \text{where} \quad R_{t+1}^{e} = \frac{p_{t+1} + d_{t+1}}{p_{t}}\\
+    1 &= \mathop{\mathbb{E}_{t}} (m_{t+1} R_{t+1}^{f}) \quad \text{where} \quad R_{t+1}^{f} = \frac{1}{q_t}
+\end{align*}
+After applying the covariance decomposition on the Euler equations and using that $R_{t+1}^{f} = \frac{1}{\mathop{\mathbb{E}_{t}}m_{t+1}}$ the equity premium equation is given by
+\begin{align*}
+    \mathop{\mathbb{E}_{t}} (R_{t+1}^{e}) - R_{t+1}^{f} &= -R_{t+1}^{f}\text{Cov}_{t}(m_{t+1}, R_{t+1}^{e}) = -\frac{\text{Cov}_{t}[u'(c_{t+1}), R_{t+1}^{e}]}{\mathop{\mathbb{E}_{t}}(u'(c_{t+1}))} 
+\end{align*}
+which shows that the expected excess return increases (and the asset's expected price falls) in the covariance between the asset's return and marginal utility of consumption. If this covariance is positive this asset provides \textit{insurance}, making it a very valuable component of intertemporal utility meeting high demand which decreases its rate of return. Conversely, if the asset's returns covary negatively with marginal utility (i.e. it does pay off when consumption is high and marginal utility low) it exacerbates consumption variability and hence works against the consumption smoothing motive inherent from expected utility.
+
+Originally, the authors solve this system of two equations by calibrating a discretized Markov process \cite{Tauchen1986} for consumption growth and allow for values for $\gamma \in [0,10]$ and $\beta \in (0,1)$ . They conclude that ``The largest premium obtainable with the model is 0.35 percent, which is not close to the observed value'' \cite{Mehra1985} which is about 6\%.
+
+In a modified version \cite{Mehra2008} with additional assumptions on the distributions of the growth rates consumption and dividends to be i.i.d. as well as both to be jointly log-normally distributed the (log) asset returns read
+\begin{align*}
+    ln[\mathop{\mathbb{E}_{t}} (R_{t+1}^{e})] &= \rho + \gamma \mu_{\Delta ln(c_{t+1})} - \frac{1}{2} \gamma^{2} \sigma_{\Delta ln(c_{t+1})}^{2} + \gamma \sigma_{(\Delta ln(c_{t+1}), \Delta ln(d_{t+1}))}\\
+    ln(R_{t+1}^{f}) &= \rho + \gamma \mu_{\Delta ln(c_{t+1})} - \frac{1}{2} \gamma^{2} \sigma_{\Delta ln(c_{t+1})}^{2}\\
+    ln[\mathop{\mathbb{E}_{t}} (R_{t+1}^{e})] - ln(R_{t+1}^{f}) &= \gamma \sigma_{(\Delta ln(c_{t+1}), \Delta ln(d_{t+1}))}
+\end{align*}
+where the last equation is the (log) equity risk premium which is the product of the coefficient of relative risk aversion $\gamma$ and the covariance between the growth rate of consumption and growth rate of dividends (or alternatively with the return on equity due to homogeneity of $p_t$ of degree 1 in $d_t$). Using the last generalisation \textbf{and} imposing the equilibrium condition that
+\begin{align*}
+    \Delta ln(c_{t+1}) &= \Delta ln(d_{t+1})
+\end{align*}
+i.e. the growth rate of consumption to be perfectly correlated with dividend growth (and hence return on equity) simplifies to
+\begin{align*}
+    ln[\mathop{\mathbb{E}_{t}} (R_{t+1}^{e})] - ln(R_{t+1}^{f}) &= \gamma \sigma_{\Delta ln(c_{t+1})}^{2}
+\end{align*}
+which shows that the (log) ERP is equal to the product of the coefficient of relative risk aversion $\gamma$ and the variance of consumption growth. It can be shown that under power utility with $\gamma > 1$ an increase in uncertainty ($\sigma_{\Delta ln(c_{t+1})}^{2}$ and/or disaster risk moments, see section \ref{disaster risk theory}) leads to the implausible prediction of a \textit{higher} price-dividend ratio. This implication originates from the restriction on the IES $\psi = \frac{1}{\gamma}$. To produce plausible predictions the IES needs to be greater than $1$.
+
+\subsubsection{Recursive utility} \label{Recursive utility}
+To overcome the aforementioned implicit restriction on the IES a generalised version of expected utility function was initially proposed by \citet{Kreps1978} and further developed by \citet{Epstein1989} and \citet{Weil1989}. 
+\begin{align*}
+    U_{t}[c_{t}, \mathop{\mathbb{E}_{t}} U_{t+1}] &= \left[(1-\beta) c_{t}^{1-\theta} + \beta(\mathop{\mathbb{E}_{t}} U_{t+1})^{\frac{1-\theta}{1-\gamma}} \right]^{\frac{1-\gamma}{1-\theta}}
+\end{align*}
+where $\gamma$ is the coefficient of relative risk aversion and $\theta$ captures the inverse of the intertemporal elasticity of substitution, $\psi$, and is independent of $\gamma$. This functional equation essentially allows marginal utilities across states to be dependent. If $\gamma = \theta$ the intertemporal program reduces to the ``standard'' expected utility framework where $\gamma = \frac{1}{\psi}$.
+The first-order condition for the representative agent's choices of consumption over time subject to the intertemporal budget constraint 
+\begin{align*}
+    w_{t+1} = (1+ R_{t+1}^{w})(w_t - c_t)
+\end{align*}
+where $w_{t+1}$ is the budget of wealth and $(1+R_{t+1}^{w})$ is the gross rate of return on the portfolio of all invested wealth (= the market portfolio) can be shown to be
+\begin{align*}
+    \beta^{\frac{(1-\gamma)}{(1-\theta)}} \cdot \mathop{\mathbb{E}_{t}} \left\{ \left(\frac{c_{t+1}}{c_{t}}\right)^{-\theta \left(\frac{1-\gamma}{1-\theta}\right)} \cdot R_{w, t+1}^{(\theta-\gamma)/(1-\theta)} \cdot R_{t+1}\right\} = 1
+\end{align*}
+where $R_{w, t+1}$ is the gross return on overall wealth (in the sense of ownership rights on trees in the Lucas tree model) and $R_{t+1}$ is the gross return on any asset (see \citet{Constantinides2003}).
+
+Proceeding similarly to the expected utility case and assuming that the growth rate of consumption and asset returns are i.i.d. and jointly lognormal gives the following closed form solutions
+\begin{align*}
+    ln[\mathop{\mathbb{E}_{t}} (R_{t+1}^{e})] &= \zeta \frac{\sigma_{(\Delta ln(d_{t+1}), \Delta ln(c_{t+1}))}}{\psi} + (1-\zeta) \sigma_{(\Delta ln(d_{t+1}), \Delta ln(w_{t+1}))} + ln(R_{t+1}^{f}) - \frac{\sigma_{\Delta ln(d_{t+1})}^{2}}{2}\\
+    ln(R_{t+1}^{f}) &= \rho + \frac{1}{\psi} \mathop{\mathbb{E}_{t}}(\Delta c_{t+1}) + \frac{\zeta -1}{2} \sigma_{\Delta ln(w_{t+1})}^{2} - \frac{\zeta}{2\psi^{2}} \sigma_{\Delta ln(c_{t+1})}^{2}
+\end{align*}
+where $\zeta = \frac{1-\gamma}{1-\frac{1}{\psi}}$ and is equal to 1 iff $\gamma = \frac{1}{\psi}$ and $\Delta ln(w_{t+1})$ is the net return on the portfolio of all invested wealth. Interestingly, this shows that a high degree of risk aversion doesn't require a low average risk-free rate (as compared to the case where $\zeta=1$).
+On this note, \citet{Weil1989} asserts that ``with i.i.d. dividend growth, the equity premium, when defined in relative terms, is independent of the IES, and reflects only the properties of the dividend growth process and, of course, the magnitude of the CRRA.''
+
+\subsection{Disaster risk theory} \label{disaster risk theory}
+%What is an economic disaster? Obviously, any economic contraction is different with respect to its origin, size, duration, persistence and geography, to name just a few aspects. 
+The disaster risk approach rests on the idea that the very possibility of rare but disastrous events such as the Great Depression and wars but also natural catastrophes affects investors' variance of marginal utility and hence prices and returns.
+
+Real output per capita (or real consumption per capita in the closed economy with no investment and government) evolves exogenously as random walk with drift with constant population according to
+\begin{align*}
+    ln(A_{t+1}) &= ln(A_{t}) + g + u_{t+1} + v_{t+1}
+\end{align*}
+where $g$ is exogenous productivity growth (average growth rate of the economy during non-disastrous periods), $u_{t+1}$ is i.i.d. normal with mean 0 and variance $\sigma^{2}$, reflecting non-disastrous economic fluctuations due to e.g. productivity shocks. $v_{t+1}$ reflects jump shocks associated with economic disasters and is i.i.d. (also with $u_{t+1}$) which allows for closed-form solutions. As such, ``they represent permanent effects on the level of output, rather than transitory disturbances to the level.'' \cite{Barro2008}
+
+The probability of a disastrous event occurring and hence for $v_{t+1} \neq 0$ is $p$. The disaster size, i.e. the fraction of output's contraction is $b$. The distribution of $v_{t+1}$ is
+\begin{align*}
+   v_{t+1} =
+    \begin{cases}
+        0,& \text{with } 1-p\\
+        ln(1-b), & \text{with } p
+    \end{cases}
+\end{align*}
+where $p$ is constant, a strong limitation for time-varying risk assessments. Recent research \cite{Tsai2015} addresses this limitation with respect to the \textit{excess volatility puzzle} \cite{Shiller1981}.
+
+The effective expected growth rate of output (or consumption) $g^{*}$ is given by
+\begin{align*}
+    g^{*} &= g + \frac{1}{2} \sigma^{2} - p \cdot \mathop{\mathbb{E}}(b)
+\end{align*}
+where $\mathop{\mathbb{E}}(b)$ is the expected value of disastrous contractions.
+The representative agent is assumed to maximize utility with Epstein-Zin-Weil preferences and with i.i.d. shocks the first-order conditions reads
+\begin{align*}
+    c_{t}^{-\gamma} &= \beta^{*} \mathop{\mathbb{E}_{t}}(R_{t} c_{t+1}^{-\gamma})
+\end{align*}
+where $\beta^{*}$ is the effective subjective discount factor, $\beta^{*} = \frac{1}{1+\rho^{*}}$, $\beta = \frac{1}{1+\rho}$ and the effective time preference rate $\rho^{*}$ is given by
+\begin{align*}
+    \rho^{*} = \rho - (\gamma - \theta) \cdot \left\{g^{*} - \frac{1}{2} \gamma \sigma^{2} - \left(\frac{p}{\gamma -1}\right) \cdot [\mathop{\mathbb{E}}(1-b)^{1-\gamma}-1-(\gamma-1) \cdot \mathop{\mathbb{E}}(b)]\right\}
+\end{align*}
+where $\theta = \frac{1}{\psi}$ and $\psi$ is the IES. Intuitively, the (effective) time preference rate can be interpreted as the hypothetical riskless real interest rate that existed if consumption would be constant forever at the level $g^{*}$ and that was known, without growth and variability and the same would hold for disaster risk parameters $p$ and $\mathop{\mathbb{E}}(b)$.
+
+The expected rate of return on equity (unlevered) reads
+\begin{align*}
+    r^{e} &= \rho^{*} + \gamma g^{*} - \frac{1}{2} \gamma (\gamma-1) \sigma^{2} - p \cdot [\mathop{\mathbb{E}}(1-b)^{1-\gamma}-1-(\gamma-1) \mathop{\mathbb{E}}(b)]
+\end{align*}
+which increases in the effective time preference rate $\rho^{*}$, the product of the coefficient of relative risk aversion and the effective growth rate of exogenous productivity and decreases in the variability of consumption growth (precautionary savings). The new term accounts for disaster risk which decreases the rate of return on equity as $p$ and $\mathop{\mathbb{E}}(b)$ increase.
+
+The risk-free rate is given by
+\begin{align*}
+    r^{f} &= \rho^{*} + \gamma g^{*} - \frac{1}{2} \gamma (\gamma+1) \sigma^{2} - p \cdot [\mathop{\mathbb{E}}(1-b)^{-\gamma}-1-\gamma \mathop{\mathbb{E}}(b)]
+\end{align*}
+The equity premium therefore is
+\begin{align*}
+    r^{e} - r^{f} &= \gamma \sigma^{2} + p \cdot [\mathop{\mathbb{E}}(1-b)^{-\gamma}-\mathop{\mathbb{E}}(1-b)^{1-\gamma}-\mathop{\mathbb{E}}(b)] = \gamma \sigma^{2} + p \cdot \mathop{\mathbb{E}} \{b \cdot [(1-b)^{-\gamma}-1]\}
+\end{align*}
+If $\gamma = \theta = \frac{1}{\psi}$ the term inside the curly brackets can be interpreted as the product between the proportionate decline in output and excess marginal utility of consumption in a disaster state over that in a normal state (the term inside the square brackets).

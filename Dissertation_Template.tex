@@ -1,0 +1,193 @@
+\documentclass[
+        a4paper,     % Format A4
+        12pt,
+        times,
+        %titlepage,   % mit Titelseite
+        %parskip      % mit Durchschuss
+                     % (= Abstand zwischen Absätzen, statt Einrückung)
+        ]{article} % KOMA-Script Grundklasse     texdoc scrguide
+\usepackage[ngerman,USenglish]{babel}
+\usepackage[T1]{fontenc}          % Schriftkodierung mit Umlauten
+\usepackage{textcomp,amsmath}     % Mathezeichen etc.
+\usepackage{graphicx}             % Graphiken einbinden
+\usepackage[utf8]{inputenc}				% direkte Eingabe von Umlauten & Co. (Vorsicht: Encoding im Editor muss auch UTF-8 sein!)
+\usepackage{url}
+\usepackage{datetime}							% \formatdate
+\usepackage{subfig}								% \subfloat
+\usepackage{ragged2e}							% \justify
+
+\usepackage[automark]{scrlayer-scrpage} % Page numbers on the right side
+\clearpairofpagestyles
+\ofoot[\pagemark]{\pagemark}
+
+\usepackage{natbib}
+
+\usepackage[hang]{footmisc} % Consistent footnote indentation for multiline footnotes
+\setlength\footnotemargin{10pt}
+\usepackage{hyperref}				% Load this after footmisc to prevent footnote warnings
+
+%\pdfsuppresswarningpagegroup=1	% Mutes the warning: "PDF inclusion: multiple PDFs with page group"
+
+\renewenvironment{abstract}[1]
+% https://tex.stackexchange.com/questions/151583/how-to-adjust-the-width-of-abstract
+ {\small
+  \begin{center}
+  \bfseries #1\vspace{-.6em}\vspace{0pt}
+  \end{center}
+  \list{}{
+    \setlength{\leftmargin}{.6cm}%
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \item\relax}
+ {\endlist}
+
+\newcommand{\sign}[1]{
+	%https://tex.stackexchange.com/questions/183698/signature-line-with-dots-and-name-below      
+  \begin{tabular}[t]{@{}l@{}}
+  \makebox[2.5in]{\dotfill}\\
+  \strut#1\strut
+  \end{tabular}
+}
+
+
+\input{preamble}
+
+%\titlehead{
+%\includegraphics{Graphics/test_image.jpg}
+%} \subject{Bachelor Thesis}
+
+%\title{The equity risk premium puzzle}
+%\author{Gerome Wolf}
+%\date{\today}
+
+%\logo{UCL_Banner}
+%\title{The equity risk premium puzzle
+%\\ \bigskip 
+%\large{A cross-country study of asset returns, growth and disaster risk}}
+%\author{Gerome Wolf\\ \small{\href{mailto:wolfgerome@gmail.com}{\nolinkurl{wolfgerome@gmail.com}}}}
+%\date{\today}
+%\publishers{
+%Department of Economics\\
+%~\\
+%\textbf{Supervisors}\\
+%Wei Cui}
+%Toni Grütze\\
+%Michael Loster}
+
+
+
+\begin{document}
+%\begin{titlingpage}
+%\begin{center}
+%\begin{lrbox}
+%  {\includegraphics[width = \textwidth]{UCL_Banner} \par}
+%\end{lrbox}
+%\includegraphics[width = \textwidth]{UCL_Banner}\\ %Put the logo you want here
+%\begin{large}
+%University College London \\ %The name your university
+%Department of Economics\\
+%\end{large}
+%\vspace{4cm} %You can control the vertical distance
+%\begin{large} 
+%\end{large}
+%\textbf{\thetitle}\\
+%\theauthor\\
+%\vspace{7cm} %Put the distance you need.
+%\thedate
+%\end{center}
+%\end{titlingpage}
+%
+%\title{My title}
+%
+%\author{My name}
+%
+%\titlepic{\includegraphics[width=\textwidth]{UCL_Banner}}
+%
+%\date{\today} 
+%
+%\maketitle
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{28}{30}} 
+\makeatother
+
+\begin{titlepage}
+   \begin{center}
+
+		\includegraphics[width=1\textwidth]{UCL_Banner}   
+   
+       \vspace*{1cm}
+		
+		\HUGE
+		\textbf{The equity risk premium puzzle}
+
+       \vspace{0.2cm}
+       \Large
+       \textbf{A cross-country study of asset returns, growth and disaster risk}
+            
+       \vspace{1cm}
+
+       \textit{Candidate:}\\
+       \vspace{0.5em}  
+       Gerome Wolf
+       
+		\vspace{0.5cm}
+		
+		\textit{Dissertation supervisor:}\\
+		\vspace{0.5em}  
+       Wei Cui
+		
+       %\vfill
+       \vspace{1cm}
+       
+       \large
+       Department of Economics\\
+       \vspace{0.5em}  
+       University College London\\
+       
+       \vfill
+       
+        \vspace{1cm}   
+       Dissertation submitted in part-fulfilment of the\\
+       \vspace{0.5em}  
+       \textit{MSc in Economics}
+            
+       \vspace{1cm}
+            
+       \today
+       
+       \vspace{1cm}
+       
+       Word count: 9996
+            
+   \end{center}
+\end{titlepage}
+
+\newpage
+%\nobibliography*
+\input{sections/abstract}
+\newpage
+%{\small\tableofcontents}
+\tableofcontents
+\addtocontents{toc}{\setcounter{tocdepth}{2}}
+\newpage
+\listoffigures
+\listoftables
+\newpage
+\input{sections/introduction}
+~\\
+\input{sections/data}
+~\\
+\input{sections/results}
+~\\
+\input{sections/conclusion}
+~\\
+\newpage
+\input{sections/acknowledgements}
+\newpage
+\bibliography{MasterThesisUCL.bib}
+\input{sections/references}
+\newpage
+\input{sections/appendix}
+\newpage
+\input{sections/declaration}
+\end{document}
