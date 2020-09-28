@@ -1,8 +1,3 @@
-<p align = "center">
-<img src="https://developer.spotify.com/assets/branding-guidelines/logo@2x.png" width="424" height="177" title="Spotify Web API">
-</a>
-</p>
-
 # Master thesis
 This is the repository for my master's thesis at UCL about
 
